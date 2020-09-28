@@ -1,0 +1,74 @@
+Tale of Two Brothers (cryptography) - Hard - 350 points:
+
+    Brief: Two loving brothers "Cryp" and "Ciph" made a deal. They found a pot of ANITMATTER in Netherland  and decided to hide it from the common people. Inorder to get the ANTIMATTER  both the brothers must be present. They exchanged messages to find their way back to the gold pot
+
+	Cryp to Ciph = "In this year - '2020' we were seperated, not anymore. Solve my note to get ur secret phrase"
+	Ciph to Cryp = "Brother, after serving in 'KRYPTON' I have decided to retire, my last word will be the end of times"
+
+	Can you help the brothers to attain the ANTIMATTER ?
+    
+    Approach:
+	1) first we need to decrypt the message, by reversing the expression
+	2) then we need to find the corresponding prime number (999999999723511), this can be done by counting from largest 15 digit number
+	3) the stopping critera is "AMCOM" for the first 5 digits
+	4) when obtained the decrypted text we need to pass it to the cipher with a pass key (keyed vigenere ciphere [kryptos cipher])
+	5)the decyphered text is used as the passphrase 
+	6)the whole text gives us the flag
+
+	FLAG : AMCOM{CryptoCipherMonatage}
+
+
+    Text File Given:
+	b = 100971021109711510810698102108115971069810210810697981011081021069897101119108103106989711910810610198103108971069810011510810310698971011081191061039811997108106981011031081069798103
+	c = 36635071678891155780964968975008776377259290255020968022917129587650315315697750708543055087607644160314272906371537575984278221054115169799889748603283702418398744536660848257807865665826789804279465652213
+
+	expression: 
+	c = (a+b)*p
+
+	p => prime number
+
+	NOTE:
+		-> Remember all flags starts with "AMCOM"
+		-> The prime number is 15 digits
+
+	The Last word = PvttkuKdtbteQjrkgoz
+
+
+HODOR HODOR HODOR (Cipher) - easy - 150
+	Brief:
+		HoDor hodoR HoooDooor Hodor?
+
+	Approach:
+		use hodor to text converter and then use hex decoder to get the flag
+
+	Text File Given:
+		Hodor hodor hodor hodor hodor hooodor hodor hodor hodor hodor hooooooooodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor Hodor
+
+	Flag:
+		AMCOM{Hordor_likes_Hex}
+
+The Pharao's lost message (Cipher) - moderate- 150:
+	Brief:
+		Archealogist have found a pyramid where the pharaoh was burried. They believe this pyramid can lead them to the fortune. Can you help them ?
+	Approach:
+		change the extension from .exe to .txt, decode the morse code to get the message and decode the md5 message and then add curly braces to get the answer
+
+
+	Text File Given in (.exe format):
+		 ______________________________________________________________________	      
+	        /----------------------------------------------------------------------\
+	       /                                                                        \ 
+	      /                                                                          \
+	     /			Can you decrypt this message?                             \
+	    /''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\
+           / 			.- -- -.-. --- -- .-.-.-                                    \
+	  /		 .- .-.. .- ... -.-.-- .-- .-- ----. .----                           \
+	 /		 .-. ..--- ----. ----- - .-- ..- -...- .-.-.-                         \
+        /______________________________________________________________________________________\
+	
+	Flag:
+		AMCOM{ALAS!YouGotMe}
+
+
+
+

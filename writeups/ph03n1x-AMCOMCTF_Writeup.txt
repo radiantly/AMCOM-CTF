@@ -1,0 +1,39 @@
+WEB:
+1)Inspector - Open source code and search for flag.
+2)Robot - https://tifaccyber.xyz/robots.txt
+3)Lost web server - use "nmap ip -p 40000-65535" and check the port 45807.
+4)Cycling - Get the "flagpart" using burpsuite and keep reloading and decode md5 hash. This is related to cookies.
+5)Phishing Fiasco - Its Local File Inclusion(LFI) vulnerability. Use php base64 filter to read the web page of stealcreds.php. There we find the passwordloot.txt. Check the passwordloot.txt and we get the flag in there.
+
+REVERSE:
+1)C for simple - Use strings and grep flag
+
+OSINT:
+1)Author - https://avsidhartha.weebly.com/amcom.html
+2)Records - check the dns dump of "tifaccyber.xyz" and check TXT record
+3)Way back then - Use wayback machince, check the pages on different timestamps and check for flag in source
+
+MISC:
+1)SpaceX - Answer the question on description its Elon Musk and use it as pwd for steghide on image.
+
+WELCOME:
+1)Discord - Check Welcome channel
+2)Mathology - Simple maths(69)
+
+FORENSICS:
+1)Metadata - Use exiftool 
+2)Not as simple - Use strings, decode base64 string and use it as pwd for steghide.
+3)Mem 1 - Copied Over - Use volatility "clipboard" plugin "volatility --plugins=plugins/ -f image.raw --profile=Win7SP1x64 clipboard"
+4)Mem 3 - Browsing History - Use volatility "chromehistory" plugin "volatility --plugins=plugins/ -f image.raw --profile=Win7SP1x64 chromehistory"
+5)Mem 4 - Passwords - Use volatility "hashdump" "volatility --plugins=plugins/ -f image.raw --profile=Win7SP1x64 hashdump". Using this we get passwords in NTLM hash. Decode them and set them alphabetically using users names
+
+CRYPTO:
+1)Too many bases - Use cyberchef bases to decode
+2)Twisted - It's vigenere cipher with AMCOM as key
+3)Mirror - Just invert the letters up to down done manually and decode base64
+4)The Pharaoh's lost message - Decode Morsecode and decode base64 part and set in flag format
+5)Esrever - Reverse the code from right to left and decode base cipher
+6)Multiply - Decode Ascii85 and decode bases cipher from cyberchef bases available
+7)Hodor Hodor Hodor - Used this tool https://www.dcode.fr/hodor-language then decoded the hex.
+
+
